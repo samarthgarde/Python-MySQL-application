@@ -5,13 +5,13 @@ It supports user signup, signin, and dashboard functionality and demonstrates re
 
 ## 🚀 Features
 
-User Signup & Signin
+- User Signup & Signin
 
-Session-based authentication
+- Session-based authentication
 
-MySQL database for storing user data
+- MySQL database for storing user data
 
-Dockerized Flask application
+- Dockerized Flask application
 
 ## 🛠️ Tech Stack
 
@@ -23,7 +23,7 @@ Dockerized Flask application
 
 ## 📂 Project Structure
 
-'''
+```bash
 Python-MySQL-application/
 │
 ├── app.py
@@ -34,12 +34,13 @@ Python-MySQL-application/
 │   ├── signin.html
 │   └── dashboard.html
 └── README.md
-'''
+```
 
 ## 🐬 MySQL Setup (Docker)
 
 Run MySQL container:
 
+```bash
 docker run -d \
   --name mysql-db \
   -e MYSQL_ROOT_PASSWORD=rootpass \
@@ -47,25 +48,25 @@ docker run -d \
   -e MYSQL_USER=admin \
   -e MYSQL_PASSWORD=adminpass \
   mysql:8.0
-
+```
 ## 🐳 Build Flask Application Image
-'''docker build -t python-mysql-app .'''
+```docker build -t python-mysql-app .```
 
 ## ▶️ Run Flask Application
-'''
+```
 docker run -d \
   --name signup-app \
   --link mysql-db \
   -p 5000:5000 \
   python-mysql-app
-'''
+```
 
 ## 🌐 Access the Application
 
 Open your browser:
-
+```
 http://localhost:5000/signup
-
+```
 ## ⭐ If you like this project
 
 Give it a ⭐ on GitHub!
